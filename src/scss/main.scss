@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+@import './import/sp_sprite';
+@import './common/mixin';
+@import './common/base';
+
+
+.sns_list{
+    display: flex;
+    padding: 18px 0;
+
+    .sns_item{
+        flex: 1;
+    }
+
+    .sns{
+        display: block;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .facebook:before{
+        @include sprite($ico_facebook);
+
+        content: '';
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .instagram:before{
+        @include sprite($ico_instagram);
+
+        content: '';
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .youtube:before{
+        @include sprite($ico_youtube);
+
+        content: '';
+        display: block;
+        margin: 0 auto 10px;
+    }
+}
+

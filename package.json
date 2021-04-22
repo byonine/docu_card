@@ -1,0 +1,25 @@
+{
+  "name": "publishing-guide",
+  "version": "1.0.0",
+  "description": "한화생명 퍼블리싱 프로젝트 셋팅 표준 가이드",
+  "main": "gulpfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sftp": "^0.1.5",
+    "gulp.spritesmith": "^6.11.0",
+    "merge-stream": "^2.0.0"
+  }
+}
