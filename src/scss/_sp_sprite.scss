@@ -1,0 +1,18 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$ico_facebook: (0px, 0px, 50px, 50px, 110px, 110px, '../img/sp_sprite.png', 'ico_facebook', );
+$ico_instagram: (-60px, 0px, 50px, 50px, 110px, 110px, '../img/sp_sprite.png', 'ico_instagram', );
+$ico_youtube: (0px, -60px, 50px, 50px, 110px, 110px, '../img/sp_sprite.png', 'ico_youtube', );
+$spritesheet-sprites: ($ico_facebook, $ico_instagram, $ico_youtube, );
+$spritesheet: (110px, 110px, '../img/sp_sprite.png', $spritesheet-sprites, );
+
+
