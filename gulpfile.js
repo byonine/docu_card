@@ -39,7 +39,7 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
 });
 
- gulp.task('ftp', function() {
+gulp.task('ftp', function() {
   let ssh = new GulpSSH({
     ignoreErrors: false,
     sshConfig: {
