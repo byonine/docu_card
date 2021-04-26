@@ -94,7 +94,15 @@ gulp.task('ftp', function() {
 `/src/img/sprites` 경로에 추가되는 이미지를 위 명령어를 통해 하나의 스프라이트 이미지로 생성해줍니다.     
 생성된 스프라이트 이미지는 `/src/img/sp_sprite.png`로 저장됩니다.
 
-4.
+4. 
+<pre>
+<code>
+    gulp uit_index
+</code>
+</pre>
+src 내부의 html 산출물을 기준으로한 index 파일을 생성합니다.
+
+5.
 <pre>
 <code>
     gulp ftp
@@ -104,7 +112,7 @@ gulp.task('ftp', function() {
 퍼블리싱 작업이 모두 완료되면 위 명령어를 통해 IT운영팀 view server에 업로드합니다.     
 https://view.ui.h-firework.com/프로젝트명/○○○○○.html URL을 통해 외부망에서 접근이 가능합니다.
 
-5.
+6.
 작업 완료 후 공유 시에 업무 내용을 확인할 수 있도록 아래 내용을 필히 포함하여 메일로 회신합니다.
     - view server URL (현업 확인용)
     - 수정된 CSS URL (개발자 확인용)
