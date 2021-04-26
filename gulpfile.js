@@ -6,6 +6,7 @@ const spritesmith = require('gulp.spritesmith');
 const imagemin = require('gulp-imagemin');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const uitIndex = require('gulp-uit-index-helper');
 
 sass.compiler = require('node-sass');
 
@@ -15,6 +16,13 @@ const paths = {
   css_src : 'src/scss',
   css_dist : 'src/css',
 }
+
+// dest로 산출물 복사시 예외 처리 되어야 할 내용
+const copyFile = [
+	'src/**',
+	'!src/scss/**',
+	'!src/sprite/**'
+]
 
 gulp.task('sprite', function () {
   var spriteData = gulp.src(`${paths.img_src}/*.png`)
@@ -60,4 +68,25 @@ gulp.task('watch', function() {
     });
     gulp.watch(paths.css_src, gulp.parallel('sass'));
     gulp.watch("./src").on('change', browserSync.reload);
+});
+
+
+gulp.task('copy',function(){
+	gulp.src(copyFile)
+	.pipe(gulp.dest('dest'))
+})
+
+gulp.task('uit_index',function(){
+	gulp.src(['src/**/*.html']) // 인덱스 대상 파일 선택
+	.pipe(uitIndex({ // 옵션 설정.
+	  filename: '@index',
+	  title: '마크업 산출물',
+	  exJs: false,
+	  html: true,
+	  qrcode: true,
+	  fold: false,
+	  fileSort: 'file',
+	  groupSort: 'asc',
+	}))
+	.pipe(gulp.dest('src/')); // 인덱스 저장 경로
 });

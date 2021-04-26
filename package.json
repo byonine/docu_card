@@ -19,7 +19,8 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "gulp-ssh": "^0.7.0",
-    "gulp.spritesmith": "^6.11.0"
+    "gulp.spritesmith": "^6.11.0",
+    "gulp-uit-index-helper": "git+http://15.164.63.108:8001/publishing/publishing-gulp-uit-index.git"
   },
   "dependencies": {}
 }
