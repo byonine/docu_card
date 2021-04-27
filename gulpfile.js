@@ -76,7 +76,7 @@ gulp.task('copy',function(){
 	.pipe(gulp.dest('dest'))
 })
 
-gulp.task('uit_index',function(){
+gulp.task('index',function(){
 	gulp.src(['src/**/*.html']) // 인덱스 대상 파일 선택
 	.pipe(uitIndex({ // 옵션 설정.
 	  filename: '@index',

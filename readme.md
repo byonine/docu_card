@@ -1,6 +1,12 @@
 IT 운영팀 퍼블리싱 프로젝트 표준 가이드
 ===============================
 
+### 마크업 컨벤션   
+- [마크업 컨벤션(HTML/CSS)](https://confluence.hanwhalife.com/pages/viewpage.action?pageId=13085695)   
+- [마크업 컨벤션(sass)](https://confluence.hanwhalife.com/pages/viewpage.action?pageId=13085698)    
+- [마크업 컨벤션(접근성)](https://confluence.hanwhalife.com/pages/viewpage.action?pageId=13085700)     
+
+
 ### 프로젝트 환경 구축
 
 dreamplus 프로젝트의 퍼블리싱 업무를 시작한다고 가정합니다.
@@ -74,7 +80,7 @@ gulp.task('ftp', function() {
 </code>
 </pre>
 
-2.
+2. 
 <pre>
 <code>
     gulp watch
@@ -97,23 +103,34 @@ gulp.task('ftp', function() {
 4. 
 <pre>
 <code>
-    gulp uit_index
+    gulp index
 </code>
 </pre>
 src 내부의 html 산출물을 기준으로한 index 파일을 생성합니다.
 
-5.
+5. 
 <pre>
 <code>
     gulp ftp
      
 </code>
 </pre>
-퍼블리싱 작업이 모두 완료되면 위 명령어를 통해 IT운영팀 view server에 업로드합니다.     
-https://view.ui.h-firework.com/프로젝트명/○○○○○.html URL을 통해 외부망에서 접근이 가능합니다.
+퍼블리싱 작업이 모두 완료되면 위 명령어를 통해 [IT운영팀 view server](https://confluence.hanwhalife.com/pages/viewpage.action?pageId=13081774)에 업로드합니다.     
+https://view.ui.h-firework.com/프로젝트명/@index.html URL을 통해 외부망에서 접근이 가능합니다.
 
-6.
-작업 완료 후 공유 시에 업무 내용을 확인할 수 있도록 아래 내용을 필히 포함하여 메일로 회신합니다.
-    - view server URL (현업 확인용)
-    - 수정된 CSS URL (개발자 확인용)
-    - 수정된 html 파일의 diff URL (개발자 확인용)
+6. 
+<pre>
+<code>
+    gulp copy   
+     
+</code>
+</pre>
+개발자에게 작업 파일을 통째로 공유해야 하는 경우 위의 명령어로 필요없는 resource(scss,spirte 조각)를 제외하고 dest 폴더에 산출물을 copy 하여 손쉽게 파일을 전달할 수 있습니다.   
+
+7.  
+작업 완료 후 공유 시에 업무 내용을 확인할 수 있도록 아래 내용을 필히 포함하여 메일로 회신합니다.   
+    - view server URL (현업 확인용)   
+    - 수정된 CSS URL (개발자 확인용)   
+    - 수정된 html 파일의 diff url(개발자 확인용) or dest산출물.zip     
+
+
